@@ -21,4 +21,9 @@ section {
     color: rgb(140, 163, 247);
 
 }
-
+h1 {
+    text-align: center;
+}
+img {
+    image-rendering: optimizeQuality;
+}
