@@ -27,3 +27,7 @@ h1 {
 img {
     image-rendering: optimizeQuality;
 }
+footer {
+    text-align: center;
+    font-family: 'Chilanka', cursive;
+}
