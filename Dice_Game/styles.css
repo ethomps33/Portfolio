@@ -1,7 +1,10 @@
+
+
 .container {
   width: 70%;
   margin: auto;
   text-align: center;
+
 }
 
 .dice {
@@ -11,21 +14,27 @@
 }
 
 body {
-  background-color: #393E46;
+  /* background-color: #f9da61b1; */
+  background-image: url("./images/futuristic-casino-architecture.png.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
 h1 {
   margin: 30px;
   font-family: 'Lobster', cursive;
-  text-shadow: 5px 0 #232931;
+  text-shadow: 5px 0 #6a0707bb;
   font-size: 8rem;
-  color: #4ECCA3;
+  color: #ff8daf;
 }
 
 p {
+  margin: 30px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 0 #6a0707bb;
   font-size: 2rem;
-  color: #4ECCA3;
-  font-family: 'Indie Flower', cursive;
+  color: #ff8daf;
 }
 
 img {
@@ -34,7 +43,7 @@ img {
 
 footer {
   margin-top: 5%;
-  color: #EEEEEE;
+  color: #ff8daf;
   text-align: center;
   font-family: 'Indie Flower', cursive;
 
