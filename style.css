@@ -1,25 +1,41 @@
 html {
-    /* background-color: rgb(186, 238, 248); */
+    /* background-color: rgb(186, 203, 206); */
     /* background-image: url("./images/close-up-mineral-background.jpg"); */
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    margin: 0;
+    padding: 0;
 }
 
 
 .navbar-custom {
-    background-color: rgb(241, 181, 232);
+    background-color: rgba(254, 0, 0, 0.288);
+    border-radius: 25px;
+    
 }
 /* Modify brand and text color */
-
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: rgb(143, 66, 244);
+.navbar-item {
+    text-decoration-color: rgb(255, 255, 255);
 }
-/* section {
-    background-color: rgb(239, 142, 176); */
-/* }  */
+.navbar-custom .navbar-brand,
+.navbar-custom {
+    color: rgb(255, 255, 255);
+}
+section {
+    background-color: rgba(255, 255, 255, 0.327);
+}
 .fw-light {
     
     
-    color: rgb(248, 248, 248);
+    color: rgba(254, 0, 0, 0.647);
 
 }
 h1 {
@@ -32,24 +48,23 @@ img {
     border-radius: 50%;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.433), 0 10px 20px 0 rgba(0, 0, 0, 0.438);
 }
-footer {
-    text-align: center;
-    font-family: 'Chilanka', cursive;
-}
-body, html {
-    height: 100%;
-    /* background-image: url("./images/close-up-mineral-background.jpg"); */
-}
 
 .bg {
     /* The image used */
-    background-image: url("./images/close-up-mineral-background.jpg");
+    background-image: url("./images/Strawberry_bubbly.jpg");
+    /* background-color: rgba(233, 235, 236, 0.892); */
 
     /* Full height */
-    height: 100%;
+    height: 25%;
 
     /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-attachment: scroll;
+    
+}
+footer {
+    text-align: center;
+    font-family: 'Chilanka', cursive;
 }
