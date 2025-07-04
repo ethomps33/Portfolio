@@ -24,7 +24,9 @@ header {
 .navbar-custom {
     background-color: rgba(254, 0, 0, 0.288);
     border-radius: 25px;
-    
+    top: -25px;
+    position: sticky;
+    transition: top 0.3s;
 }
 /* Modify brand and text color */
 .navbar-item {
