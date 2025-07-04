@@ -1,6 +1,9 @@
 body {
   text-align: center;
-  background-color: #283149;
+  background-image: url("./images/OQ3OWG0.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65%;
 }
 
 h1 {
@@ -12,7 +15,7 @@ h1 {
 }
 
 footer {
-  color: #DBEDF3;
+  color: #DA0463;
   font-family: sans-serif;
 }
 
@@ -71,13 +74,13 @@ footer {
 
 .drum {
   outline: none;
-  border: 10px solid #404B69;
+  border: 10px solid #66c5d4;
   font-size: 5rem;
   font-family: 'Arvo', cursive;
   line-height: 2;
   font-weight: 900;
-  color: #DA0463;
-  text-shadow: 3px 0 #DBEDF3;
+  color: #78dc46;
+  text-shadow: 3px 0 #2587e2;
   border-radius: 15px;
   display: inline-block;
   width: 150px;
