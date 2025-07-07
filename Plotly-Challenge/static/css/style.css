@@ -1,0 +1,62 @@
+
+.jumbo-bg {
+    background: url('../images/unsplash-elena-mozhvilo.png') no-repeat center;
+    background-size: cover;
+    z-index: 100;
+}
+
+.demo-text {
+    font-size: 14px;
+}
+
+.nav-item .dropdown {
+    z-index: 9999;
+}
+.belly-bg .card-header {
+    z-index: 1;
+}
+
+.card .card-header {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#selDataset {
+    font-size: 14px;
+}
+
+.belly-bg {
+    background-color: #225ea8 !important
+}
+
+.header-font {
+    font-family: 'Sofia', serif;
+}
+
+.sub-header, h5 {
+    font-family: "Quicksand";
+}
+
+.navbar-custom {
+    background-color:#225ea86d !important;
+    border-radius: 25px;
+    top: -25px;
+    position: sticky;
+    transition: top 0.3s;
+
+}
+/* Modify brand and text color */
+.navbar-item {
+    text-decoration-color: rgb(255, 255, 255);
+    
+}
+.navbar-custom .navbar-brand,
+.navbar-custom {
+    color: rgb(255, 255, 255);
+}
+
+.text {
+    
+    text-decoration-color: black;
+    font-family:"Sofia", sans-serif;
+}

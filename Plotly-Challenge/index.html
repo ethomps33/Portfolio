@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bellybutton Biodiversity</title>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Google fonts CSS-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Crafty+Girls&family=Fuzzy+Bubbles&family=Leckerli+One&family=Yomogi&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+        </script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+    body {
+    font-family: "Sofia", sans-serif;
+    }
+    </style>
+
+    <!-- custom CSS-->
+    <link href="static/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class=" header-font">
+            <a class="navbar-brand" href="../index.html" >
+            <img src="../images/coding_11920711.png" alt="Bootstrap" width="37" height="30" > Evann Goel
+            </a>
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="../Dice_Game/dicee.html">Dice Game</a>
+                <a class="dropdown-item" href="../Drum Kit/index.html">Drum Kit</a>
+                <a class="dropdown-item" href="../EPL_Analysis_Website/index.html">ELP Analysis</a>
+                <a class="dropdown-item" href="./index.html">Bio-Diversity Dashboard</a>
+                </div>
+            </li>
+            </ul>
+        </div>
+</nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center jumbo-bg">
+                <h1 class="header-font text-dark">Belly Button Biodiversity Dashboard</h1>
+                <h5 class="text-dark">This interactive dashboard was built to explore the [Belly Button Biodiversity dataset],
+                    which catalogs the microbes that colonize human navels in JSON format. The dataset reveals that a small
+                    handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present
+                    in more than 70% of people, while the rest were relatively rare. Demographics information is dynamically
+                    populated based upon  a user-selected test subject ID. A bar chart, bubble chart and a bonus gauge chart
+                    also update once the ID is changed. Code has been written using Plotly, JavaScript, HTML, CSS, and D3.js</h5>
+                <h6 class="text-dark  header-font"><strong>Use the interactive charts below to explore the dataset!</strong></h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card mb-4">
+                    <div class="card-header belly-bg text-light text-center sub-header">Test Subject ID</div>
+                    <div class="card-body p-2 text-center bg-light">
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header belly-bg text-light text-center sub-header">Demographic Info</div>
+                    <div class="card-body p-2 bg-light" id="sample-metadata">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="bar"></div>
+            </div>
+            <div class="col-md-5">
+                <div id="gauge"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bubble"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="static/js/app.js"></script>
+
+</body>
+
+</html>
