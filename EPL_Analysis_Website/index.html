@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EPL Analysis</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+    </script>
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="../index.html ">
+      <img src="./images/coding_11920711.png" alt="Bootstrap" width="30" height="24"> Evann Goel
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="../Dice_Game/dicee.html">Dice Game</a>
+                <a class="dropdown-item" href="../Drum Kit/index.html">Drum Kit</a>
+                <a class="dropdown-item" href="../EPL_Analysis_Website/index.html">ELP Analysis</a>
+                <a class="dropdown-item" href="../Plotly-Challenge/index.html">Bio-Diversity Dashboard</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://ethomps33.github.io/EPL_Analysis_Website/corners.html">Corners</a>
+                <a class="dropdown-item" href="https://ethomps33.github.io/EPL_Analysis_Website/fouls.html">Fouls</a>
+                
+                <a class="dropdown-item" href="https://ethomps33.github.io/EPL_Analysis_Website/shots.html">Shots</a>
+                <a class="dropdown-item" href="https://ethomps33.github.io/EPL_Analysis_Website/goals.html">Goals</a>
+                <hr class="dropdown-divider">
+                <a class="dropdown-item" href="https://ethomps33.github.io/EPL_Analysis_Website/bottom.html">Bottom Teams</a>
+                <a class="dropdown-item" href="https://ethomps33.github.io/EPL_Analysis_Website/top.html">Top Teams</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://ethomps33.github.io/EPL_Analysis_Website/comparissons.html">Comparisions</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="https://ethomps33.github.io/EPL_Analysis_Website/data.html" tabindex="-1" aria-disabled="true">Data</a>
+            </li> -->
+          </ul>
+          </form>
+        </div>
+      </div>
+    
+</nav>
+    <section class="py-5 text-center container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="fw-light"><strong>An Analysis of Premier League Teams Over 4 Seasons</strong></h1>
+                <br>
+                <img src="data:image/png;base64,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" alt="Premier League banner">
+                <br>
+                <br>
+                <p class="lead text-muted">The Premier League is an English Football League regarded as one of the best in the world.
+                    Every season 20 teams compete over the course of 9 months and 38 matches to be on top of 
+                    the table and qualify for the UEFA Champions Leauge and the UEFA Europa League. <br>
+                    <br>
+                    This project is an analysis of the 20 teams in the Permier League over the course of 4 Seasons
+                    from the 2015/2016 season to 2018/2019. It will look at team's total points over the 4 seasions,
+                    an analysis of the the top 4 and bottom 3 teams by points, and the correlation between different
+                    game statistics and total points.</p>
+            </div>
+        </div>
+        
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="Soccer ball with premier leauge logo">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPB7GHYLSnW5JyP6udekJ5XvsPvk_dq4aSA&usqp=CAU" class="d-block w-100" alt="Soccer ball with player legs in the background">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://e0.365dm.com/20/05/768x432/skysports-premier-league-return_5000805.jpg?20200528144054" class="d-block w-100" alt="Premier league players">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://e0.365dm.com/21/02/768x432/skysports-graphic-managers_5275404.jpg?20210217103005" class="d-block w-100" alt="Premier league managers">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://d2zywfiolv4f83.cloudfront.net/img/customstageheaders/17590.jpg" class="d-block w-100" alt="Premier league players">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://e0.365dm.com/21/02/768x432/skysports-graphic-managers_5275404.jpg?20210217103005" class="d-block w-100" alt="Premier league managers">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://e0.365dm.com/21/02/768x432/skysports-graphic-managers_5275404.jpg?20210217103005" class="d-block w-100" alt="Premier league managers">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvMmmVza_WclGHBG5iMJSHs2opWhlUOTykrg&usqp=CAU" class="d-block w-100" alt="Premier league logo">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlt5_7s461Duu2QVCEbtqEP9UQkxsdo8mH7g&usqp=CAU" class="d-block w-100" alt="Premier league trophy">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://static.standard.co.uk/2021/03/08/11/newFile.jpg?crop=3%3A2%2Csmart&width=640&auto=webp&quality=75" class="d-block w-100" alt="Tottenham players celebrating with Son facing the camera">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <center><h2 class="fw-light"><strong>Plots</strong></h2></center>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+              
+              <div class="card" style="width: 18rem;">
+                <a href="https://ethomps33.github.io/EPL_Analysis_Website/corners.html">
+                  <img  src="Resources\assets\images\CornersvsTotpts.png" class="card-img-top" alt="Corners vs Total points scatter plot">
+                </a>
+                  <div class="card-body">
+                    <h5 class="card-title">Corners vs. Total Points</h5>
+                    <p class="card-text">The amount of corners each Premier League team has taken in comparison to the total points at the of the season along with a linear regression </p>
+                    <a href="https://ethomps33.github.io/EPL_Analysis_Website/corners.html" class="btn btn-primary" style="background-color: rgb(69, 0, 75);">Corners</a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                  <a href="https://ethomps33.github.io/EPL_Analysis_Website/fouls.html">
+                    <img  src="Resources\assets\images\FoulsvsTotpts.png" class="card-img-top" alt="Fouls vs Total points scatter plot">
+                  </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Fouls vs. Total Points</h5>
+                      <p class="card-text">The amount of fouls each Premier League team has taken in comparison to the total points at the of the season along with a linear regression</p>
+                      <a href="https://ethomps33.github.io/EPL_Analysis_Website/fouls.html" class="btn btn-primary" style="background-color: rgb(69, 0, 75);">Fouls</a>
+                    </div>
+                  </div>
+              </div>
+            <br>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                  <a href="https://ethomps33.github.io/EPL_Analysis_Website/goals.html">
+                    <img src="Resources\assets\images\GoalsvsTotpts.png" class="card-img-top" alt="Goals vs total points scatter plots">
+                  </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Goals vs. Total Points</h5>
+                      <p class="card-text">The amount of goals each Premier League team has taken in comparison to the total points at the of the season along with a linear regression</p>
+                      <a href="https://ethomps33.github.io/EPL_Analysis_Website/goals.html" class="btn btn-primary" style="background-color: rgb(69, 0, 75);">Goals</a>
+                    </div>
+                  </div>
+            </div>
+            <br>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                  <a href="https://ethomps33.github.io/EPL_Analysis_Website/shots.html">
+                    <img  src="Resources\assets\images\ShotsvsTotpts.png" class="card-img-top" alt="Shots vs total points scatter plot">
+                  </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Shots vs. Total Points</h5>
+                      <p class="card-text">The amount of shots each Premier League team has taken in comparison to the total points at the of the season along with a linear regression</p>
+                      <a href="https://ethomps33.github.io/EPL_Analysis_Website/shots.html" class="btn btn-primary" style="background-color: rgb(69, 0, 75);">Shots</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3 class="fw-light"><strong>Bonus Plots</strong></h3>
+    <br>
+    <center><div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card" style="width: 18rem;">
+            <a href="https://ethomps33.github.io/EPL_Analysis_Website/bottom.html">
+              <img src="Resources\assets\images\BottomTeamsTotalpts.png" class="card-img-top" alt="Bottom 3 teams over 4 seasons bar plot">
+            </a>
+              <div class="card-body">
+                <h5 class="card-title">Relegated Teams Over 4 Seasons</h5>
+                <p class="card-text">The bottom 3 Premier League teams over 4 seasons. The bottom 3 teams are relegated at the end of each season. This is illustrated by a bar plot.</p>
+                <a href="https://ethomps33.github.io/EPL_Analysis_Website/bottom.html" class="btn btn-primary" style="background-color: rgb(69, 0, 75);">Relegated Teams</a>
+              </div>
+            </div>
+      </div>
+      <br>
+      <div class="col-md-6">
+          <div class="card" style="width: 18rem;">
+            <a href="https://ethomps33.github.io/EPL_Analysis_Website/top.html">
+              <img  src="Resources\assets\images\TopTeamsTotalpts.png" class="card-img-top" alt="Top 4 teams over 4 seasons bar plot">
+            </a>
+              <div class="card-body">
+                <h5 class="card-title">Champions League Teams Over 4 Seasons</h5>
+                <p class="card-text">The top 4 Premier League teams over 4 seasons. The top 4 teams qualify for the Champions League at the end of each season. This is illustrated by a bar plot.</p>
+                <a href="https://ethomps33.github.io/EPL_Analysis_Website/top.html" class="btn btn-primary" style="background-color: rgb(69, 0, 75);">Champions League Teams</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    
+    </center>
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+</html>
